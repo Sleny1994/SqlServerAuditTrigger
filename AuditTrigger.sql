@@ -13,7 +13,7 @@ AS
 BEGIN
     SET NOCOUNT ON
     
-    DECLARE @sql NVARCHAR(4000),
+    DECLARE @sql NVARCHAR(MAX),
             @tableName NVARCHAR(255) = '[' + @Schema + '].[' + @SourceTableName + ']',
             @auditTableName NVARCHAR(255) = '[' + @Schema + '].[' + @SourceTableName + '_Audit]',
             @auditTriggerName NVARCHAR(255) = '[' + @Schema + '].[Audit_' + @SourceTableName + ']', 
